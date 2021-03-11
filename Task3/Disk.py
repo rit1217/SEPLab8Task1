@@ -31,3 +31,21 @@ class Disk():
         left(90)
         forward(self.w / 2)
         end_fill()
+
+    def showdisk(self):
+        penup()
+        goto(self.x, self.y)
+        pendown()
+        fillcolor("blue")
+        
+        begin_fill()
+        forwardd(self.width / 2)
+        left(90)
+        forward(self.height)
+        left(90)
+        forward(self.width)
+        left(90)
+        forward(self.height)
+        left(90)
+        forward(self.width / 2)
+        end_fill()

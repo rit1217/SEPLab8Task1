@@ -42,7 +42,7 @@ def main():
 	w.show()
 
 	return app.exec_()
-	#kjj
+	
 
 if __name__ == "__main__":
 	sys.exit(main())

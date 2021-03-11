@@ -27,12 +27,12 @@ class Simple_drawing_window(QWidget):
     
     def mouseMoveEvent(self):
         pass
-    
-    def paint(self, e):
+
+    def paintEvent(self, e):
         p = QPainter()
         p.begin(self)
-        p.setPen(QColor(0, 0, 0))
-        p.setBrush(QColor(0, 0, 0))
+        p.setPen(QColor(0, 0, 255))
+        p.setBrush(QColor(0, 0, 255))
         for point in self.points:
             p.drawPie(point.x(), point.y(), 10, 10, 0, 180 * 32)
         p.end()

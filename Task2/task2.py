@@ -25,17 +25,10 @@ class Simple_drawing_window(QWidget):
     def clear( self ):
         self.points.clear()
     
-<<<<<<< HEAD
     def mouseMoveEvent(self,event):
         self.points.append(event.pos())
     
     def paint(self, e):
-=======
-    def mouseMoveEvent(self):
-        pass
-
-    def paintEvent(self, e):
->>>>>>> 765cbb1575995cda932411bbf7b5c5f93abd752a
         p = QPainter()
         p.begin(self)
         p.setPen(QColor(0, 0, 255))

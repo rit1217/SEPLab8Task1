@@ -20,10 +20,10 @@ class Simple_drawing_window(QWidget):
         self.button.setText("Clear")
         self.button.clicked.connect(self.clear)
         self.button.move(260, 450)
-
+ #oioib
     
     def clear( self ):
-        pass
+        self.points.clear()
     
     def mouseMoveEvent(self):
         pass

@@ -8,19 +8,23 @@ from PySide6.QtPrintSupport import *
 class Simple_drawing_window(QWidget):
     def __init__(self):
         QWidget.__init__(self, None)
-        self.setWindowTitle("Simple Drawing")
-        self.points = []
-
-        self.resize(400, 300)
+        self.setWindowTitle("A simple paint program")
+        self.resize(600, 500)
 
         self.label = QLabel(self)
-        self.label.setText("Drag mouse to draw")
-        self.label.move(140, 260)
+        self.label.setText("Drag the mouse to draw")
+        self.label.move(240, 400)
 
+        self.points = []
         self.button = QPushButton(self)
         self.button.setText("Clear")
-        self.button.move(140, 280)
-        self.button.clicked.connect(self.clear_points)
+        self.button.clicked.connect(self.clear)
+        self.button.move(260, 450)
+
+    
+    def clear( self ):
+        pass
+    
 
         
 def main():

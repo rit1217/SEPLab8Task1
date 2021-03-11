@@ -10,13 +10,13 @@ class Disk():
 #test
     def newpos(self, x, y):
         self.cleardisk()
-        self.x = x
-        self.y = y
+        self.posx = x
+        self.posy = y
         self.showdisk()
 
     def cleardisk(self):
         penup()
-        goto(self.x, self.y)
+        goto(self.posx, self.y)
         pendown()
         pencolor("white")
         fillcolor("white")
@@ -34,10 +34,10 @@ class Disk():
 
     def showdisk(self):
         penup()
-        goto(self.x, self.y)
+        goto(self.posx, self.posy)
         pendown()
         fillcolor("blue")
-        
+
         begin_fill()
         forwardd(self.width / 2)
         left(90)

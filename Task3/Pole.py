@@ -11,11 +11,10 @@ class Pole:
         self.length = 210
 
     def showpole(self):
-        paspeed(0)
         penup()
         color("red")
-        goto(self.x, self.y)
-        sethome(0)
+        goto(self.posx, self.posy)
+        seth(0)
         pendown()
         begin_fill()
         forward(self.thickness / 2)
@@ -27,7 +26,7 @@ class Pole:
         forward(self.length)
         left(90)
         forward(self.thickness / 2)
-        sethome(0)
+        seth(0)
         end_fill()
 
     def pushdisk(self, disk):

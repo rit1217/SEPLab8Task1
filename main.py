@@ -1,5 +1,5 @@
 from simple_drawing_window2 import *
-from simple_drawing_window1 import *
+from Simple_drawing_window1 import *
 
 def main():
     app = QApplication(sys.argv)

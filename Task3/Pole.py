@@ -31,7 +31,7 @@ class Pole:
 
     def pushdisk(self, disk):
         self.stack.append(disk)
-        disk.newpos(self.posx, self.posy + disk.height * len(self.stack))
+        disk.newpos(self.posx, self.posy + disk.h * len(self.stack))
 
     def popdisk(self):
         disk = self.stack.pop(len(self.stack) - 1)

@@ -1,40 +1,41 @@
 from turtle import *
 
 class Pole:
-    def __init__(self, name, posx, posy):
+    def __init__(self, name, x, y):
         self.name = name
-        self.posx = posx
-        self.posy = posy
+        self.x = x
+        self.y = y
         self.stack = []
         self.top_position = 0
         self.thickness = 30
         self.length = 210
 
     def showpole(self):
-        penup()
-        color("red")
-        goto(self.posx, self.posy)
+        speed(0)
+        pu()
+        color("black")
+        goto(self.x, self.y)
         seth(0)
-        pendown()
+        pd()
         begin_fill()
-        forward(self.thickness / 2)
-        left(90)
-        forward(self.length)
-        left(90)
-        forward(self.thickness)
-        left(90)
-        forward(self.length)
-        left(90)
-        forward(self.thickness / 2)
+        fd(self.thickness / 2)
+        lt(90)
+        fd(self.length)
+        lt(90)
+        fd(self.thickness)
+        lt(90)
+        fd(self.length)
+        lt(90)
+        fd(self.thickness / 2)
         seth(0)
-        end_fill()
+        # end_fill()
 
     def pushdisk(self, disk):
         self.stack.append(disk)
-        disk.newpos(self.posx, self.posy + disk.h * len(self.stack))
+        disk.newpos(self.x, self.y + disk.height * len(self.stack))
 
     def popdisk(self):
         disk = self.stack.pop(len(self.stack) - 1)
-        disk.newpos(self.posx, self.length + 50)
+        disk.newpos(self.x, self.length + 50)
         self.showpole()
         return disk

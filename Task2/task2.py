@@ -23,7 +23,7 @@ class Simple_drawing_window(QWidget):
  #oioib
     
     def clear( self ):
-        pass
+        self.points.clear()
     
     def mouseMoveEvent(self):
         pass

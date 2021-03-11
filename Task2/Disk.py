@@ -7,7 +7,7 @@ class Disk():
         self.w = w
         self.c = c
 
-
+#test
     def newpos(self, x, y):
         self.cleardisk()
         self.x = x

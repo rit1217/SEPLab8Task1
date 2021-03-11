@@ -1,12 +1,14 @@
 from simple_drawing_window2 import *
-
+from simple_drawing_window1 import *
 def main():
 	app = QApplication(sys.argv)
 
-	w = simple_drawing_window2()
+    w1 = simple_drawing_window1()
+	w2 = simple_drawing_window2()
     
-	w.show()
-
+	w1.show()
+    w2.show()
+    
 	return app.exec_()
 	#rabbit
 

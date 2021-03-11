@@ -1,4 +1,4 @@
-import simple_drawing_window
+from simple_drawing_window import *
 
 def main():
 	app = QApplication(sys.argv)

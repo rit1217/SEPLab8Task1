@@ -3,13 +3,11 @@ import sys
 from PySide6.QtCore import *
 from PySide6.QtWidgets import *
 from PySide6.QtGui import *
+from simple_drawing_window import *
 
-class simple_drawing_window(QWidget):
+class simple_drawing_window1( simple_drawing_window):
 	def __init__(self):
-		QWidget.__init__(self, None)
-		self.setWindowTitle("Simple Drawing")
-        
-		self.rabbit = QPixmap("image/rabbit.png")
+		super().__init__()
         
 	def paintEvent(self, e):
 		p = QPainter()
@@ -36,14 +34,3 @@ class simple_drawing_window(QWidget):
         
 		p.end()
 
-def main():
-	app = QApplication(sys.argv)
-
-	w = simple_drawing_window()
-    
-	w.show()
-
-	return app.exec_()
-
-if __name__ == "__main__":
-	sys.exit(main())

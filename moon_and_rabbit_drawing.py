@@ -14,10 +14,12 @@ class simple_drawing_window(QWidget):
 		p = QPainter()
 		p.begin(self)
 		
+	
+		p.setPen(QColor(255,222,0))
+		p.setBrush(QColor(255,222,0))
+		p.drawEllipse(50,150, 200,200)
 
-		p.setPen(QColor((255,255,0)))
-		p.setBrush(QColor((255,255,0)))
-		p.drawArc(50,200,150,50,0,16*360)
+		
 		
 		p.drawPixmap(QRect(400,150,200,200), self.rabbit)
         

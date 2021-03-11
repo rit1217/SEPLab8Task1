@@ -10,3 +10,4 @@ class Simple_drawing_window2( simple_drawing_window ):
         super.__init__()
 
     def paintEvent( self, e ):
+        
